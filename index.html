@@ -5,16 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Amaranth|Concert+One|Alegreya|Courgette&display=swap" rel="stylesheet">
+
+
 </header>
 <style>
-        #aa_verb{font-family: 'Saira Stencil One', cursive;}
-        .mytense{font-size: 130%; }
+        #mytitle{ font-family: 'Concert One', cursive;}
+        #aa_verb{ font-family: 'Amaranth', sans-serif;}
+        #aa_meaning{font-family: 'Courgette', cursive;}
+        .mytense{font-family: 'Alegreya', serif; font-size: 130%; }
+        pre{ font-family: 'Amaranth', sans-serif;}
 </style>
 
 <body class="container"><br/><br/>
 <!--title-->
-        <strong><h1 class="text-center">1000 Simple Verb Conjugation</h1></strong><br/>
+        <strong><h1 id="mytitle" class="text-center">1000 Simple Verb Conjugation</h1></strong><br/>
 
 <!--press button-->
         <div>
@@ -219,7 +224,7 @@
         if (bb.readyState == 4 && bb.status == 200) {
           var cc = bb.responseXML;
           aa_verb.innerHTML=cc.getElementsByTagName("verb").item(i).textContent;
-          aa_meaning.innerHTML=cc.getElementsByTagName("meaning").item(i).textContent;
+          aa_meaning.innerHTML="("+cc.getElementsByTagName("meaning").item(i).textContent+")";
           aa_a1.innerHTML= "j’ " +cc.getElementsByTagName("a1").item(i).textContent;
           aa_a2.innerHTML= "tu " +cc.getElementsByTagName("a2").item(i).textContent;
           aa_a3.innerHTML= "il " +cc.getElementsByTagName("a3").item(i).textContent;
