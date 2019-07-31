@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+<header>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</header>
+
+
+
+
+<body class="container"><br/><br/>
+
+<!--title-->
+        <strong><h1 class="text-center">1000 Simple Verb Conjugation</h1></strong><br/>
+
+<!--press button image-->
+        <div>
+        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="aaa()"
+        </div><br/><br/>
+
+<div class="container-fluid">
+<div>
+<!-- list of verbs-->
+        <pre style="height: 750px;" class="pagination pull-left pre-scrollable" onclick="bbb()" >
+        <style>
+        a{width: 150px;"}
+        </style>
+
+        <li><a href="#" id="cc1">abaisser</a></li>
+        <li><a href="#" id="cc2">abandonner</a></li>
+        <li><a href="#" id="cc3">abîmer</a></li>
+        <li><a href="#" id="cc4">absorber</a></li>
+        <li><a href="#" id="cc5">abuser</a></li>
+        <li><a href="#" id="cc6">accepter</a></li>
+        <li><a href="#" id="cc7">accompagner</a></li>
+        <li><a href="#" id="cc8">accomplir</a></li>
+        <li><a href="#" id="cc9">accorder</a></li>
+        <li><a href="#" id="cc10">accoter</a></li>
+       </pre>
+</div>
+
+<!-- show verb conjugation table-->
+<div class="pull-left">
+<h1 id="aa_verb"></h3>
+<h3  id="aa_meaning"></h3>
+<table class="table table-striped">
+<tbody>
+<tr>
+  <td>Present</td>
+  <td>Future simple</td>
+</tr>
+<tr>
+  <td id="aa_a1"></td>
+  <td id="aa_d1"></td>
+</tr>
+<tr>
+  <td id="aa_a2"></td>
+  <td id="aa_d2"></td>
+</tr>
+<tr>
+  <td id="aa_a3"></td>
+  <td id="aa_d3"></td>
+</tr>
+<tr>
+  <td id="aa_a4"></td>
+  <td id="aa_d4"></td>
+</tr>
+<tr>
+  <td id="aa_a5"></td>
+  <td id="aa_d5"></td>
+</tr>
+<tr>
+  <td id="aa_a6"></td>
+  <td id="aa_d6"></td>
+</tr>
+<tr>
+  <td></td>
+  <td>Subjonctif</td>
+</tr>
+<tr>
+  <td>Passe compose</td>
+  <td  id="aa_e1"></td>
+</tr>
+<tr>
+  <td>j'ai, tu as, il a,</td>
+  <td  id="aa_e2"></td>
+</tr>
+<tr>
+  <td>nous avons, vous avez, ils ont</td>
+  <td  id="aa_e3"></td>
+</tr>
+<tr>
+  <td></td>
+  <td  id="aa_e4"></td>
+</tr>
+<tr>
+  <td id="aa_b1"></td>
+  <td  id="aa_e5"></td>
+</tr>
+<tr>
+  <td></td>
+  <td  id="aa_e6"></td>
+</tr>
+<tr>
+  <td>Imparfait</td>
+  <td>Conditionner</td>
+</tr>
+<tr>
+  <td>i was doing, i used to do</td>
+  <td id="aa_g1"></td>
+</tr>
+<tr>
+  <td id="aa_c1"></td>
+  <td  id="aa_g2"></td>
+</tr>
+<tr>
+  <td id="aa_c2"></td>
+  <td  id="aa_g3"></td>
+</tr>
+<tr>
+  <td id="aa_c3"></td>
+  <td  id="aa_g4"></td>
+</tr>
+<tr>
+  <td id="aa_c4"></td>
+  <td  id="aa_g5"></td>
+</tr>
+<tr>
+  <td id="aa_c5"></td>
+  <td  id="aa_g6"></td>
+</tr>
+<tr>
+  <td id="aa_c6"></td>
+  <td>imperatif</td>
+</tr>
+<tr>
+  <td></td>
+  <td id="aa_f1"></td>
+</tr>
+<tr>
+  <td></td>
+  <td id="aa_f2"></td>
+</tr>
+<tr>
+  <td></td>
+  <td id="aa_f3"></td>
+</tr>
+</tbody>
+</table>
+
+      <button type="button" onclick="aaa()">yyy</button>
+
+      <script>
+      var aa_verb=document.getElementById("aa_verb");
+      var aa_meaning=document.getElementById("aa_meaning");
+      var aa_a1=document.getElementById("aa_a1");
+      var aa_a2=document.getElementById("aa_a2");
+      var aa_a3=document.getElementById("aa_a3");
+      var aa_a4=document.getElementById("aa_a4");
+      var aa_a5=document.getElementById("aa_a5");
+      var aa_a6=document.getElementById("aa_a6");
+      var aa_b1=document.getElementById("aa_b1");
+      var aa_c1=document.getElementById("aa_c1");
+      var aa_c2=document.getElementById("aa_c2");
+      var aa_c3=document.getElementById("aa_c3");
+      var aa_c4=document.getElementById("aa_c4");
+      var aa_c5=document.getElementById("aa_c5");
+      var aa_c6=document.getElementById("aa_c6");
+      var aa_d1=document.getElementById("aa_d1"); 
+      var aa_d2=document.getElementById("aa_d2");
+      var aa_d3=document.getElementById("aa_d3");
+      var aa_d4=document.getElementById("aa_d4");
+      var aa_d5=document.getElementById("aa_d5");
+      var aa_d6=document.getElementById("aa_d6");
+      var aa_e1=document.getElementById("aa_e1");
+      var aa_e2=document.getElementById("aa_e2");
+      var aa_e3=document.getElementById("aa_e3");
+      var aa_e4=document.getElementById("aa_e4");
+      var aa_e5=document.getElementById("aa_e5");
+      var aa_e6=document.getElementById("aa_e6");
+      var aa_f1=document.getElementById("aa_f1");
+      var aa_f2=document.getElementById("aa_f2");
+      var aa_f3=document.getElementById("aa_f3");
+      var aa_g1=document.getElementById("aa_g1");
+      var aa_g2=document.getElementById("aa_g2");
+      var aa_g3=document.getElementById("aa_g3");
+      var aa_g4=document.getElementById("aa_g4");
+      var aa_g5=document.getElementById("aa_g5");
+      var aa_g6=document.getElementById("aa_g6");
+
+
+      function aaa() {
+      i=0
+      var bb = new XMLHttpRequest();
+      bb.onreadystatechange = function() {
+        if (bb.readyState == 4 && bb.status == 200) {
+          var cc = bb.responseXML;
+          aa_verb.innerHTML=cc.getElementsByTagName("verb").item(i).textContent;
+          aa_meaning.innerHTML=cc.getElementsByTagName("meaning").item(i).textContent;
+          aa_a1.innerHTML=cc.getElementsByTagName("a1").item(i).textContent;
+          aa_a2.innerHTML=cc.getElementsByTagName("a2").item(i).textContent;
+          aa_a3.innerHTML=cc.getElementsByTagName("a3").item(i).textContent;
+          aa_a4.innerHTML=cc.getElementsByTagName("a4").item(i).textContent;
+          aa_a5.innerHTML=cc.getElementsByTagName("a5").item(i).textContent;
+          aa_a6.innerHTML=cc.getElementsByTagName("a6").item(i).textContent;
+          aa_b1.innerHTML=cc.getElementsByTagName("b1").item(i).textContent;
+          aa_c1.innerHTML=cc.getElementsByTagName("c1").item(i).textContent;
+          aa_c2.innerHTML=cc.getElementsByTagName("c2").item(i).textContent;
+          aa_c3.innerHTML=cc.getElementsByTagName("c3").item(i).textContent;
+          aa_c4.innerHTML=cc.getElementsByTagName("c4").item(i).textContent;
+          aa_c5.innerHTML=cc.getElementsByTagName("c5").item(i).textContent;
+          aa_c6.innerHTML=cc.getElementsByTagName("c6").item(i).textContent;
+          aa_d1.innerHTML=cc.getElementsByTagName("d1").item(i).textContent;
+          aa_d2.innerHTML=cc.getElementsByTagName("d2").item(i).textContent;
+          aa_d3.innerHTML=cc.getElementsByTagName("d3").item(i).textContent;
+          aa_d4.innerHTML=cc.getElementsByTagName("d4").item(i).textContent;
+          aa_d5.innerHTML=cc.getElementsByTagName("d5").item(i).textContent;
+          aa_d6.innerHTML=cc.getElementsByTagName("d6").item(i).textContent;
+          aa_e1.innerHTML=cc.getElementsByTagName("e1").item(i).textContent;
+          aa_e2.innerHTML=cc.getElementsByTagName("e2").item(i).textContent;
+          aa_e3.innerHTML=cc.getElementsByTagName("e3").item(i).textContent;
+          aa_e4.innerHTML=cc.getElementsByTagName("e4").item(i).textContent;
+          aa_e5.innerHTML=cc.getElementsByTagName("e5").item(i).textContent;
+          aa_e6.innerHTML=cc.getElementsByTagName("e6").item(i).textContent;
+          aa_f1.innerHTML=cc.getElementsByTagName("f1").item(i).textContent;
+          aa_f2.innerHTML=cc.getElementsByTagName("f2").item(i).textContent;
+          aa_f3.innerHTML=cc.getElementsByTagName("f3").item(i).textContent;
+          aa_g1.innerHTML=cc.getElementsByTagName("g1").item(i).textContent;
+          aa_g2.innerHTML=cc.getElementsByTagName("g2").item(i).textContent;
+          aa_g3.innerHTML=cc.getElementsByTagName("g3").item(i).textContent;
+          aa_g4.innerHTML=cc.getElementsByTagName("g4").item(i).textContent;
+          aa_g5.innerHTML=cc.getElementsByTagName("g5").item(i).textContent;
+          aa_g6.innerHTML=cc.getElementsByTagName("g6").item(i).textContent;
+      }}
+      bb.open("GET", "output.xml", true);
+      bb.send();}
+      </script>
+</div>
+
+
+</div>
+</body>
+
+<p class="text-center">Site designed 2019 by Kongping Zhang</p>
+</html>
