@@ -11,41 +11,39 @@
         #aa_verb{font-family: 'Saira Stencil One', cursive;}
         .mytense{font-size: 130%; }
 </style>
-<script>
-        var aa;
-        var bb = new XMLHttpRequest();
-        bb.onreadystatechange = function() {
-          if (bb.readyState == 4 && bb.status == 200) {
-            var cc = bb.responseXML;
-            aa=cc.getElementsByTagName("verb").length;
-        }}
-        bb.open("GET", "output.xml", true);
-        bb.send();  
-</script>
 
 <body class="container"><br/><br/>
-
 <!--title-->
         <strong><h1 class="text-center">1000 Simple Verb Conjugation</h1></strong><br/>
 
-<!--press button image-->
+<!--press button-->
         <div>
-        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="bbb(Math.round(Math.random()*(aa-1)))">
+        <script>
+                var aa;
+                var bb = new XMLHttpRequest();
+                bb.onreadystatechange = function() {
+                  if (bb.readyState == 4 && bb.status == 200) {
+                    var cc = bb.responseXML;
+                    aa=cc.getElementsByTagName("verb").length;
+                }}
+                bb.open("GET", "output.xml", true);
+                bb.send();  
+        </script>
+        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="aaa(Math.round(Math.random()*(aa-1)))">
         </div><br/><br/> 
 
 <div class="container-fluid">
 <div>
-<!-- list of verbs-->
-        <pre style="height: 750px;" class="pagination pull-left pre-scrollable" style="display: block;" onclick="bbb()" >
+<!-- navigation section-->
+        <pre style="height: 750px;" class="pagination pull-left pre-scrollable" style="display: block;" >
         <style>
         a{width: 150px;"}
         </style>
        </pre>
 
-
-<script>
-       var aa;
-       var dd=[];
+       <script>
+        var aa;
+        var dd=[];
 
         var bb = new XMLHttpRequest();
         bb.onreadystatechange = function() {
@@ -55,33 +53,16 @@
 
             for (j = 0; j <aa; j++) {
                         dd[j] = cc.getElementsByTagName("verb").item(j).textContent;
-
-
-var ee = document.createElement("BUTTON");
-var ff = document.createTextNode(dd[j]);
-ee.appendChild(ff);
-document.getElementsByTagName("PRE")[0].append(ee);
-document.getElementsByTagName("BUTTON")[j].style.display="block";
-                       }
-
-        }}
+                        var ee = document.createElement("BUTTON");
+                        var ff = document.createTextNode(dd[j]);
+                        ee.appendChild(ff);
+                        document.getElementsByTagName("PRE")[0].append(ee);
+                        document.getElementsByTagName("BUTTON")[j].style.display="block";
+                        document.getElementsByTagName("BUTTON")[j].setAttribute("onclick", "aaa(" + j + ")");}
+            }}
         bb.open("GET", "output.xml", true);
         bb.send();  
-
-
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
+       </script>
 </div>
 
 <!-- show verb conjugation table-->
@@ -231,8 +212,8 @@ document.getElementsByTagName("BUTTON")[j].style.display="block";
       var aa_g5=document.getElementById("aa_g5");
       var aa_g6=document.getElementById("aa_g6");
 
-      bbb(0);
-      function bbb(i) {
+      aaa(0);
+      function aaa(i) {
       var bb = new XMLHttpRequest();
       bb.onreadystatechange = function() {
         if (bb.readyState == 4 && bb.status == 200) {
@@ -284,3 +265,4 @@ document.getElementsByTagName("BUTTON")[j].style.display="block";
 
 <p class="text-center">Site designed 2019 by Kongping Zhang</p>
 </html>
+
