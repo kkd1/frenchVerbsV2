@@ -20,8 +20,8 @@
 
 <!--press button image-->
         <div>
-        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="aaa(i=Math.round(Math.random()*944))"
-        </div><br/><br/>
+        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="aaa(Math.round(Math.random()*944))"
+        </div><br/><br/> 
 
 <div class="container-fluid">
 <div>
@@ -193,6 +193,7 @@
       var aa_g5=document.getElementById("aa_g5");
       var aa_g6=document.getElementById("aa_g6");
 
+      aaa(0);
       function aaa(i) {
       var bb = new XMLHttpRequest();
       bb.onreadystatechange = function() {
