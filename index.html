@@ -11,7 +11,17 @@
         #aa_verb{font-family: 'Saira Stencil One', cursive;}
         .mytense{font-size: 130%; }
 </style>
-
+<script>
+        var myTotalNodes;
+        var bb = new XMLHttpRequest();
+        bb.onreadystatechange = function() {
+          if (bb.readyState == 4 && bb.status == 200) {
+            var cc = bb.responseXML;
+            myTotalNodes=cc.getElementsByTagName("verb").length-1;
+        }}
+        bb.open("GET", "output.xml", true);
+        bb.send();  
+</script>
 
 <body class="container"><br/><br/>
 
@@ -20,7 +30,7 @@
 
 <!--press button image-->
         <div>
-        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="aaa(Math.round(Math.random()*944))"
+        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="bbb(Math.round(Math.random()*myTotalNodes))">
         </div><br/><br/> 
 
 <div class="container-fluid">
@@ -153,8 +163,6 @@
         </tbody>
         </table>
 
-      <button type="button" onclick="aaa(0)">yyy</button>
-
       <script>
       var aa_verb=document.getElementById("aa_verb");
       var aa_meaning=document.getElementById("aa_meaning");
@@ -193,8 +201,8 @@
       var aa_g5=document.getElementById("aa_g5");
       var aa_g6=document.getElementById("aa_g6");
 
-      aaa(0);
-      function aaa(i) {
+      bbb(0);
+      function bbb(i) {
       var bb = new XMLHttpRequest();
       bb.onreadystatechange = function() {
         if (bb.readyState == 4 && bb.status == 200) {
