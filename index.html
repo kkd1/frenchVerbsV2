@@ -153,7 +153,7 @@
         </tbody>
         </table>
 
-      <button type="button" onclick="aaa()">yyy</button>
+      <button type="button" onclick="aaa(0)">yyy</button>
 
       <script>
       var aa_verb=document.getElementById("aa_verb");
@@ -193,8 +193,7 @@
       var aa_g5=document.getElementById("aa_g5");
       var aa_g6=document.getElementById("aa_g6");
 
-      function aaa() {
-      i=0
+      function aaa(i) {
       var bb = new XMLHttpRequest();
       bb.onreadystatechange = function() {
         if (bb.readyState == 4 && bb.status == 200) {
