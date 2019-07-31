@@ -12,12 +12,12 @@
         .mytense{font-size: 130%; }
 </style>
 <script>
-        var myTotalNodes;
+        var aa;
         var bb = new XMLHttpRequest();
         bb.onreadystatechange = function() {
           if (bb.readyState == 4 && bb.status == 200) {
             var cc = bb.responseXML;
-            myTotalNodes=cc.getElementsByTagName("verb").length-1;
+            aa=cc.getElementsByTagName("verb").length;
         }}
         bb.open("GET", "output.xml", true);
         bb.send();  
@@ -30,28 +30,58 @@
 
 <!--press button image-->
         <div>
-        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="bbb(Math.round(Math.random()*myTotalNodes))">
+        <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="bbb(Math.round(Math.random()*(aa-1)))">
         </div><br/><br/> 
 
 <div class="container-fluid">
 <div>
 <!-- list of verbs-->
-        <pre style="height: 750px;" class="pagination pull-left pre-scrollable" onclick="bbb()" >
+        <pre style="height: 750px;" class="pagination pull-left pre-scrollable" style="display: block;" onclick="bbb()" >
         <style>
         a{width: 150px;"}
         </style>
-
-        <li><a href="#" id="cc1">abaisser</a></li>
-        <li><a href="#" id="cc2">abandonner</a></li>
-        <li><a href="#" id="cc3">abîmer</a></li>
-        <li><a href="#" id="cc4">absorber</a></li>
-        <li><a href="#" id="cc5">abuser</a></li>
-        <li><a href="#" id="cc6">accepter</a></li>
-        <li><a href="#" id="cc7">accompagner</a></li>
-        <li><a href="#" id="cc8">accomplir</a></li>
-        <li><a href="#" id="cc9">accorder</a></li>
-        <li><a href="#" id="cc10">accoter</a></li>
        </pre>
+
+
+<script>
+       var aa;
+       var dd=[];
+
+        var bb = new XMLHttpRequest();
+        bb.onreadystatechange = function() {
+          if (bb.readyState == 4 && bb.status == 200) {
+            var cc = bb.responseXML;
+            aa=cc.getElementsByTagName("verb").length;
+
+            for (j = 0; j <aa; j++) {
+                        dd[j] = cc.getElementsByTagName("verb").item(j).textContent;
+
+
+var ee = document.createElement("BUTTON");
+var ff = document.createTextNode(dd[j]);
+ee.appendChild(ff);
+document.getElementsByTagName("PRE")[0].append(ee);
+document.getElementsByTagName("BUTTON")[j].style.display="block";
+                       }
+
+        }}
+        bb.open("GET", "output.xml", true);
+        bb.send();  
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <!-- show verb conjugation table-->
