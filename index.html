@@ -12,7 +12,7 @@
 <style>
         #mytitle{ font-family: 'Concert One', cursive;}
         #aa_verb{ font-family: 'Amaranth', sans-serif;}
-        #aa_meaning{font-family: 'Courgette', cursive;}
+        #aa_meaning{font-family: 'Courgette', cursive; }
         .mytense{font-family: 'Alegreya', serif; font-size: 130%; }
         pre{ font-family: 'Amaranth', sans-serif;}
 </style>
@@ -37,13 +37,10 @@
         <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="aaa(Math.round(Math.random()*(aa-1)))">
         </div><br/><br/> 
 
-<div class="container-fluid">
-<div>
+<div class="container-fluid row">
+<div class="col-xs-2">
 <!-- navigation section-->
         <pre style="height: 750px;" class="pagination pull-left pre-scrollable" style="display: block;" >
-        <style>
-        a{width: 150px;"}
-        </style>
        </pre>
 
        <script>
@@ -71,113 +68,114 @@
 </div>
 
 <!-- show verb conjugation table-->
-        <div class="pull-left" style="margin-left: 20px;">
-        <h1 id="aa_verb"></h3>
-        <h3  id="aa_meaning"></h3>
-        <table class="table table-striped">
+        <div class="col-xs-9" style="margin-left: 20px;">
+        <h1 id="aa_verb" class="text-center" style="margin:0;"></h3>
+        <h3  id="aa_meaning" class="text-center" style="margin-top:0;"></h3>
+        <table class="table table-striped table-hover table-condensed table-responsive"  style="display: flex; flex:auto; justify-content:center; ">
         <tbody>
         <tr>
-          <td class="mytense">Présent</td>
-          <td class="mytense">Future simple</td>
+          <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Présent</td>
+          <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Future simple</td>
         </tr>
         <tr>
-          <td id="aa_a1"></td>
-          <td id="aa_d1"></td>
+          <td id="aa_a1" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_d1" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_a2"></td>
-          <td id="aa_d2"></td>
+          <td id="aa_a2" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_d2" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_a3"></td>
-          <td id="aa_d3"></td>
+          <td id="aa_a3" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_d3" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_a4"></td>
-          <td id="aa_d4"></td>
+          <td id="aa_a4" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_d4" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_a5"></td>
-          <td id="aa_d5"></td>
+          <td id="aa_a5" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_d5" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_a6"></td>
-          <td id="aa_d6"></td>
+          <td id="aa_a6" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_d6" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td></td>
-          <td class="mytense">Subjonctif</td>
+          <td style="margin-bottom:0; padding-bottom:0;"></td>
+          <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Subjonctif</td>
         </tr>
         <tr>
-          <td class="mytense">Passé compose</td>
-          <td  id="aa_e1"></td>
+          <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Passé compose</td>
+          <td  id="aa_e1" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td>j'ai, tu as, il a,</td>
-          <td  id="aa_e2"></td>
+          <td style="margin-bottom:0; padding-bottom:0;">j'ai, tu as, il a,</td>
+          <td  id="aa_e2" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td>nous avons, vous avez, ils ont</td>
-          <td  id="aa_e3"></td>
+          <td style="margin-bottom:0; padding-bottom:0;">nous avons, vous avez, ils ont</td>
+          <td  id="aa_e3" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td></td>
-          <td  id="aa_e4"></td>
+          <td style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_e4" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_b1"></td>
-          <td  id="aa_e5"></td>
+          <td id="aa_b1" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_e5" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td></td>
-          <td  id="aa_e6"></td>
+          <td style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_e6" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td class="mytense">Imparfait</td>
-          <td class="mytense">Conditionnel</td>
+          <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Imparfait</td>
+          <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Conditionnel</td>
         </tr>
         <tr>
-          <td>(I was doing, i used to do)</td>
-          <td id="aa_g1"></td>
+          <td style="margin-bottom:0; padding-bottom:0;">(I was doing, i used to do)</td>
+          <td id="aa_g1" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_c1"></td>
-          <td  id="aa_g2"></td>
+          <td id="aa_c1" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_g2" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_c2"></td>
-          <td  id="aa_g3"></td>
+          <td id="aa_c2" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_g3" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_c3"></td>
-          <td  id="aa_g4"></td>
+          <td id="aa_c3" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_g4" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_c4"></td>
-          <td  id="aa_g5"></td>
+          <td id="aa_c4" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_g5" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_c5"></td>
-          <td  id="aa_g6"></td>
+          <td id="aa_c5" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td  id="aa_g6" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td id="aa_c6"></td>
-          <td class="mytense">Impératif</td>
+          <td id="aa_c6" style="margin-bottom:0; padding-bottom:0;"></td>
+          <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Impératif</td>
         </tr>
         <tr>
-          <td></td>
-          <td id="aa_f1"></td>
+          <td style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_f1" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td></td>
-          <td id="aa_f2"></td>
+          <td style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_f2" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         <tr>
-          <td></td>
-          <td id="aa_f3"></td>
+          <td style="margin-bottom:0; padding-bottom:0;"></td>
+          <td id="aa_f3" style="margin-bottom:0; padding-bottom:0;"></td>
         </tr>
         </tbody>
         </table>
+
 
       <script>
       var aa_verb=document.getElementById("aa_verb");
@@ -266,7 +264,7 @@
 </div>
 
 </div>
-</body>
+</body><br/><br/><br/>
 
 <p class="text-center">Site designed 2019 by Kongping Zhang</p>
 </html>
