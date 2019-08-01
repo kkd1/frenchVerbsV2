@@ -15,7 +15,8 @@
         #aa_meaning{font-family: 'Courgette', cursive; }
         .mytense{font-family: 'Alegreya', serif; font-size: 130%; }
         pre{ font-family: 'Amaranth', sans-serif;}
-        td:hover{background-color:steelblue; color:white; font-weight: bold; font-smooth:always;}
+       div{padding:5px; margin:5px;}
+        td:hover, button:hover{background-color:steelblue; color:white; font-weight: bold; font-smooth:always;}
 </style>
 
 <body class="container"><br/><br/>
@@ -38,10 +39,10 @@
         <img src="./pressbutton.jpeg" class="img-responsive center-block" onclick="aaa(Math.round(Math.random()*(aa-1)))">
         </div><br/><br/> 
 
-<div class="container-fluid row">
-<div class="col-xs-2">
+<div class="container-fluid row center-block" style="width:100%;">
+<div class="col-xs-2 ">
 <!-- navigation section-->
-        <pre style="height: 750px;" class="pagination pull-left pre-scrollable" style="display: block;" >
+        <pre style="min-width:100px; min-height: 800px; display:block; overflow-x:hidden;" class="pre-scrollable">
        </pre>
 
        <script>
@@ -61,7 +62,8 @@
                         ee.appendChild(ff);
                         document.getElementsByTagName("PRE")[0].append(ee);
                         document.getElementsByTagName("BUTTON")[j].style.display="block";
-                        document.getElementsByTagName("BUTTON")[j].setAttribute("onclick", "aaa(" + j + ")");}
+                        document.getElementsByTagName("BUTTON")[j].setAttribute("onclick", "aaa(" + j + ")");
+                        document.getElementsByTagName("BUTTON")[j].setAttribute("class", "list-group-item");}
             }}
         bb.open("GET", "output.xml", true);
         bb.send();  
@@ -72,7 +74,7 @@
         <div class="col-xs-9" style="margin-left: 20px;">
         <h1 id="aa_verb" class="text-center" style="margin:0;"></h3>
         <h3  id="aa_meaning" class="text-center" style="margin-top:0;"></h3>
-        <table class="table table-striped table-hover table-condensed table-responsive"  style="display: flex; flex:auto; justify-content:center; ">
+        <table class="table table-striped table-hover table-condensed table-responsive"  style="display: flex; flex:auto; justify-content:center;">
         <tbody>
         <tr>
           <td class="mytense info" style="margin-bottom:0; padding-bottom:0;">Présent</td>
